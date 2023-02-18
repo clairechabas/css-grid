@@ -1,0 +1,24 @@
+.photo-grid {
+  display: grid;
+  gap: 1rem;
+
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+
+  /* Set the rows size (so the height of the cells basically) */
+  grid-auto-rows: 240px;
+}
+
+/* We don't want to apply different cell sizes on small 
+screen to avoid having cell shrinked too small when other
+grow too wide for a small viewport */
+@media screen and (min-width: 600px) {
+  /* Make an item taller (spread among rows) */
+  .card-tall {
+    grid-row: span 2 / auto;
+  }
+
+  /* Make an item wider (spread among columns */
+  .card-wide {
+    grid-column: span 2 / auto;
+  }
+}

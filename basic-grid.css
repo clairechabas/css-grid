@@ -1,0 +1,11 @@
+.basic-grid {
+  display: grid;
+  gap: 1rem;
+
+  /* auto-fill will expand the number of columns but keep them to 240px */
+  /* grid-template-columns: repeat(auto-fill, minmax(240px, 1fr)); */
+
+  /* auto-fill will expand the number of columns and expand their width
+  /* above 240px to take up all the available space */
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+}
